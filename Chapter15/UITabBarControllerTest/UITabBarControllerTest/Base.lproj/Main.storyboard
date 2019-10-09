@@ -81,7 +81,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="33P-9f-Jhc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="ASt-rB-CGn"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="topRated" id="ASt-rB-CGn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SP8-i7-YLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
