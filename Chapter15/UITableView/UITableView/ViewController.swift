@@ -10,17 +10,9 @@ import UIKit
 
 class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
-    var curWidth:CGFloat
-    var curHeight:CGFloat
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        curWidth = self.view.frame.size.width
-        curHeight = self.view.frame.size.height
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var curWidth:CGFloat = 0.0
+    var curHeight:CGFloat = 0.0
+    var dataArray:Array<String>?
 
     //UITableViewDataSource 协议方法，设置列表有多少行
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,14 +49,29 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     //设置分区尾部视图
-    func 
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width:curWidth , height: 50))
+        view.backgroundColor = UIColor.green
+        return view
+    }
+    
+    //设置分区头部视图高度
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 120
+    }
+    
+    //设置分区尾部视图高度
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
     
     
-    var dataArray:Array<String>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        curWidth = self.view.frame.size.width
+        curHeight = self.view.frame.size.height
         dataArray = ["1st Row","2nd Row", "3rd Row", "4th Row","5th Row"]
         //.plain是扁平化风格,.grouped是分组风格
         //let tableView = UITableView(frame: self.view.frame, style: .plain)
