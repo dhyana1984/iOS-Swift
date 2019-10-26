@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,9 +50,15 @@
 		834308582360A6C500210E33 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834308332360A6C500210E33 /* ConstraintLayoutSupportDSL.swift */; };
 		834308592360A6C500210E33 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834308342360A6C500210E33 /* ConstraintMakerRelatable.swift */; };
 		8343085B2360AAE200210E33 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343085A2360AAE200210E33 /* HomeView.swift */; };
+		838D3BCF23649F20009244AE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D3BCE23649F20009244AE /* DataManager.swift */; };
+		838D3BD12364A9B2009244AE /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D3BD02364A9B2009244AE /* NoteModel.swift */; };
+		838D3BD32364ABBB009244AE /* NoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D3BD22364ABBB009244AE /* NoteListTableViewController.swift */; };
+		AC0C9E32D35E1FB433FAD24F /* Pods_NoteBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C3C7D208BE867A8F3FEAE /* Pods_NoteBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		622AA8182C541A0AFC75B159 /* Pods-NoteBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteBook.release.xcconfig"; path = "Target Support Files/Pods-NoteBook/Pods-NoteBook.release.xcconfig"; sourceTree = "<group>"; };
+		74BDD44E84574AF35B8F66B9 /* Pods-NoteBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteBook.debug.xcconfig"; path = "Target Support Files/Pods-NoteBook/Pods-NoteBook.debug.xcconfig"; sourceTree = "<group>"; };
 		834307F72360A64000210E33 /* NoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834307FA2360A64000210E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834307FC2360A64000210E33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,10 @@
 		834308332360A6C500210E33 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		834308342360A6C500210E33 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		8343085A2360AAE200210E33 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		838D3BCE23649F20009244AE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		838D3BD02364A9B2009244AE /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		838D3BD22364ABBB009244AE /* NoteListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewController.swift; sourceTree = "<group>"; };
+		9A8C3C7D208BE867A8F3FEAE /* Pods_NoteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,17 +116,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0C9E32D35E1FB433FAD24F /* Pods_NoteBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A256921BDAC51F02D4A76C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A8C3C7D208BE867A8F3FEAE /* Pods_NoteBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		788C1AC5B0AAFF462C4B7C73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74BDD44E84574AF35B8F66B9 /* Pods-NoteBook.debug.xcconfig */,
+				622AA8182C541A0AFC75B159 /* Pods-NoteBook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		834307EE2360A64000210E33 = {
 			isa = PBXGroup;
 			children = (
 				834307F92360A64000210E33 /* NoteBook */,
 				834307F82360A64000210E33 /* Products */,
+				788C1AC5B0AAFF462C4B7C73 /* Pods */,
+				4A256921BDAC51F02D4A76C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +170,9 @@
 				834308052360A64200210E33 /* LaunchScreen.storyboard */,
 				834308082360A64200210E33 /* Info.plist */,
 				8343085A2360AAE200210E33 /* HomeView.swift */,
+				838D3BCE23649F20009244AE /* DataManager.swift */,
+				838D3BD02364A9B2009244AE /* NoteModel.swift */,
+				838D3BD22364ABBB009244AE /* NoteListTableViewController.swift */,
 			);
 			path = NoteBook;
 			sourceTree = "<group>";
@@ -195,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8343080B2360A64200210E33 /* Build configuration list for PBXNativeTarget "NoteBook" */;
 			buildPhases = (
+				3F6B176984D7377C7AA731A7 /* [CP] Check Pods Manifest.lock */,
 				834307F32360A64000210E33 /* Sources */,
 				834307F42360A64000210E33 /* Frameworks */,
 				834307F52360A64000210E33 /* Resources */,
+				48C95877E6D273340F3F974E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +289,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F6B176984D7377C7AA731A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoteBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48C95877E6D273340F3F974E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoteBook/Pods-NoteBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoteBook/Pods-NoteBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoteBook/Pods-NoteBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		834307F32360A64000210E33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,6 +342,7 @@
 				834308352360A6C500210E33 /* ConstraintMultiplierTarget.swift in Sources */,
 				834308522360A6C500210E33 /* Debugging.swift in Sources */,
 				834308552360A6C500210E33 /* LayoutConstraint.swift in Sources */,
+				838D3BCF23649F20009244AE /* DataManager.swift in Sources */,
 				834308482360A6C500210E33 /* Typealiases.swift in Sources */,
 				8343084F2360A6C500210E33 /* ConstraintView+Extensions.swift in Sources */,
 				8343083F2360A6C500210E33 /* ConstraintMakerExtendable.swift in Sources */,
@@ -289,12 +367,14 @@
 				8343084B2360A6C500210E33 /* ConstraintMakerEditable.swift in Sources */,
 				834308562360A6C500210E33 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				8343083B2360A6C500210E33 /* ConstraintPriorityTarget.swift in Sources */,
+				838D3BD12364A9B2009244AE /* NoteModel.swift in Sources */,
 				834308492360A6C500210E33 /* ConstraintConstantTarget.swift in Sources */,
 				8343083E2360A6C500210E33 /* ConstraintDSL.swift in Sources */,
 				834308402360A6C500210E33 /* ConstraintPriority.swift in Sources */,
 				834308452360A6C500210E33 /* ConstraintView.swift in Sources */,
 				834308372360A6C500210E33 /* ConstraintDescription.swift in Sources */,
 				834308442360A6C500210E33 /* UILayoutSupport+Extensions.swift in Sources */,
+				838D3BD32364ABBB009244AE /* NoteListTableViewController.swift in Sources */,
 				834308582360A6C500210E33 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				8343083D2360A6C500210E33 /* ConstraintMakerFinalizable.swift in Sources */,
 				834308472360A6C500210E33 /* ConstraintLayoutSupport.swift in Sources */,
@@ -440,6 +520,7 @@
 		};
 		8343080C2360A64200210E33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74BDD44E84574AF35B8F66B9 /* Pods-NoteBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +539,7 @@
 		};
 		8343080D2360A64200210E33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622AA8182C541A0AFC75B159 /* Pods-NoteBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,7 +8,13 @@
 
 import UIKit
 
+
+protocol HomeButtonDelegate {
+    func homeButtonClick(title:String)
+}
+
 class HomeView: UIScrollView {
+    var homeButtonDelegate: HomeButtonDelegate?
     //定义列间距
     let interitemSpacing = 15
     //定义行间距
@@ -55,6 +61,14 @@ class HomeView: UIScrollView {
     }
     //按钮触发方法
     @objc func btnClick(btn : UIButton){
-        print(dataArray![btn.tag])
+       
+        if homeButtonDelegate != nil{
+             
+            homeButtonDelegate?.homeButtonClick(title: dataArray![btn.tag])
+            print(dataArray![btn.tag])
+        }
     }
+
 }
+
+

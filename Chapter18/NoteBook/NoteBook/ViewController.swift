@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController , HomeButtonDelegate{
+    
     var homeView : HomeView?
     //存放用户纪事分组信息
     var dataArray: Array<String>?
@@ -19,8 +19,15 @@ class ViewController: UIViewController {
         self.title = "Anything About Life"
         //取消导航栏对页面布局的影响
         self.edgesForExtendedLayout = UIRectEdge()
-        dataArray = ["Life","Working","Learning","Meeting","Sports"]
+        //dataArray = DataManager.getGroupData()
         self.installUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         dataArray = DataManager.getGroupData()
+        self.homeView?.dataArray = dataArray
+        self.homeView?.updateLayout()
     }
     
     func installUI(){
@@ -30,6 +37,7 @@ class ViewController: UIViewController {
         homeView = HomeView(frame: CGRect(x: 0, y: 0, width: width, height: height - 64))
         self.view.addSubview(homeView!)
         homeView?.dataArray = dataArray
+        homeView!.homeButtonDelegate = self
         installNavigationItem()
     }
     
@@ -73,13 +81,20 @@ class ViewController: UIViewController {
             //进行homeView刷新
             self.homeView?.dataArray = self.dataArray
             self.homeView?.updateLayout()
+            //将添加的分组写入数据库
+            DataManager.saveGroup(name: alertController.textFields!.first!.text!)
         })
         alertController.addAction(alertItem)
         alertController.addAction(alertItemAdd)
         //展示警告
         self.present(alertController, animated: true, completion: nil)
-        
-        
+    }
+    
+    func homeButtonClick(title: String) {
+        let controller = NoteListTableViewController()
+        controller.name = title
+        print(title)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
 

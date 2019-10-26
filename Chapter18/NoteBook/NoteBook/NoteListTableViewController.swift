@@ -9,27 +9,64 @@
 import UIKit
 
 class NoteListTableViewController: UITableViewController {
+    //数据源数组
+    var dataArray = Array<NoteModel>()
+    //当前分组
+    var name:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //设置导航栏标题
+        self.title = name
+        //模拟创建10条数据
+        for _ in 0...10{
+            let model = NoteModel()
+            model.time = "2016.11.11"
+            model.title = "Just Shopping"
+            model.body = "Check list........"
+            dataArray.append(model)
+        }
+        //进行导航按钮的加载
+        installNavigationItem()
+    }
+    
+    func installNavigationItem(){
+        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNode))
+        let deleteItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteGroup))
+        self.navigationItem.rightBarButtonItems = [addItem, deleteItem]
+    }
+    
+    @objc func addNode(){
+        
+    }
+    
+    @objc func deleteGroup(){
+        
     }
 
-    // MARK: - Table view data source
-
+    //设置分区数为1
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
+    //设置行数为数据源中的数据个数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dataArray.count
+    }
+    
+    //进行数据载体CellDe设置
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellID = "noteListCellID"
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+        if cell == nil{
+            cell = UITableViewCell(style: .value1, reuseIdentifier: cellID)
+        }
+        let model = dataArray[indexPath.row]
+        cell?.textLabel?.text = model.title
+        cell?.detailTextLabel?.text = model.time
+        cell?.accessoryType = .disclosureIndicator
+        return cell!
     }
 
     /*
