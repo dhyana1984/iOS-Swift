@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DD03ADD41783A6EF6424E21 /* Pods_ChineseChess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C7742961D8D7275FF6AFA5 /* Pods_ChineseChess.framework */; };
+		83742DA42365FEE7001120FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83742DA32365FEE7001120FF /* AppDelegate.swift */; };
+		83742DA62365FEE7001120FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83742DA52365FEE7001120FF /* SceneDelegate.swift */; };
+		83742DA82365FEE7001120FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83742DA72365FEE7001120FF /* ViewController.swift */; };
+		83742DAB2365FEE7001120FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83742DA92365FEE7001120FF /* Main.storyboard */; };
+		83742DAD2365FEE9001120FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83742DAC2365FEE9001120FF /* Assets.xcassets */; };
+		83742DB02365FEE9001120FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83742DAE2365FEE9001120FF /* LaunchScreen.storyboard */; };
+		83742DB8236601D5001120FF /* MusicEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83742DB7236601D5001120FF /* MusicEngine.swift */; };
+		83742DBA236603C1001120FF /* USerInfpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83742DB9236603C1001120FF /* USerInfpManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83742DA02365FEE7001120FF /* ChineseChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83742DA32365FEE7001120FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83742DA52365FEE7001120FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		83742DA72365FEE7001120FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83742DAA2365FEE7001120FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83742DAC2365FEE9001120FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83742DAF2365FEE9001120FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83742DB12365FEE9001120FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83742DB7236601D5001120FF /* MusicEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEngine.swift; sourceTree = "<group>"; };
+		83742DB9236603C1001120FF /* USerInfpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USerInfpManager.swift; sourceTree = "<group>"; };
+		97C7742961D8D7275FF6AFA5 /* Pods_ChineseChess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChineseChess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50F15AE3A453D44D25C7832 /* Pods-ChineseChess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseChess.debug.xcconfig"; path = "Target Support Files/Pods-ChineseChess/Pods-ChineseChess.debug.xcconfig"; sourceTree = "<group>"; };
+		E1913C46AD342E1BC58E024D /* Pods-ChineseChess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChineseChess.release.xcconfig"; path = "Target Support Files/Pods-ChineseChess/Pods-ChineseChess.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83742D9D2365FEE7001120FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD03ADD41783A6EF6424E21 /* Pods_ChineseChess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13135667F0699979D75F9B44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A50F15AE3A453D44D25C7832 /* Pods-ChineseChess.debug.xcconfig */,
+				E1913C46AD342E1BC58E024D /* Pods-ChineseChess.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5124FB5D12B4A3CF4C2D2062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97C7742961D8D7275FF6AFA5 /* Pods_ChineseChess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83742D972365FEE7001120FF = {
+			isa = PBXGroup;
+			children = (
+				83742DA22365FEE7001120FF /* ChineseChess */,
+				83742DA12365FEE7001120FF /* Products */,
+				13135667F0699979D75F9B44 /* Pods */,
+				5124FB5D12B4A3CF4C2D2062 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		83742DA12365FEE7001120FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83742DA02365FEE7001120FF /* ChineseChess.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83742DA22365FEE7001120FF /* ChineseChess */ = {
+			isa = PBXGroup;
+			children = (
+				83742DA32365FEE7001120FF /* AppDelegate.swift */,
+				83742DA52365FEE7001120FF /* SceneDelegate.swift */,
+				83742DA72365FEE7001120FF /* ViewController.swift */,
+				83742DA92365FEE7001120FF /* Main.storyboard */,
+				83742DAC2365FEE9001120FF /* Assets.xcassets */,
+				83742DAE2365FEE9001120FF /* LaunchScreen.storyboard */,
+				83742DB12365FEE9001120FF /* Info.plist */,
+				83742DB7236601D5001120FF /* MusicEngine.swift */,
+				83742DB9236603C1001120FF /* USerInfpManager.swift */,
+			);
+			path = ChineseChess;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83742D9F2365FEE7001120FF /* ChineseChess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83742DB42365FEE9001120FF /* Build configuration list for PBXNativeTarget "ChineseChess" */;
+			buildPhases = (
+				63E5C8263C10855122EB08D3 /* [CP] Check Pods Manifest.lock */,
+				83742D9C2365FEE7001120FF /* Sources */,
+				83742D9D2365FEE7001120FF /* Frameworks */,
+				83742D9E2365FEE7001120FF /* Resources */,
+				B7ACD7CF7C42A7E806CEA83F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChineseChess;
+			productName = ChineseChess;
+			productReference = 83742DA02365FEE7001120FF /* ChineseChess.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83742D982365FEE7001120FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = org.chris;
+				TargetAttributes = {
+					83742D9F2365FEE7001120FF = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 83742D9B2365FEE7001120FF /* Build configuration list for PBXProject "ChineseChess" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83742D972365FEE7001120FF;
+			productRefGroup = 83742DA12365FEE7001120FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83742D9F2365FEE7001120FF /* ChineseChess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83742D9E2365FEE7001120FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83742DB02365FEE9001120FF /* LaunchScreen.storyboard in Resources */,
+				83742DAD2365FEE9001120FF /* Assets.xcassets in Resources */,
+				83742DAB2365FEE7001120FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63E5C8263C10855122EB08D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChineseChess-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7ACD7CF7C42A7E806CEA83F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChineseChess/Pods-ChineseChess-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChineseChess/Pods-ChineseChess-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChineseChess/Pods-ChineseChess-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83742D9C2365FEE7001120FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83742DA82365FEE7001120FF /* ViewController.swift in Sources */,
+				83742DA42365FEE7001120FF /* AppDelegate.swift in Sources */,
+				83742DBA236603C1001120FF /* USerInfpManager.swift in Sources */,
+				83742DA62365FEE7001120FF /* SceneDelegate.swift in Sources */,
+				83742DB8236601D5001120FF /* MusicEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83742DA92365FEE7001120FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83742DAA2365FEE7001120FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83742DAE2365FEE9001120FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83742DAF2365FEE9001120FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83742DB22365FEE9001120FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83742DB32365FEE9001120FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83742DB52365FEE9001120FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50F15AE3A453D44D25C7832 /* Pods-ChineseChess.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K7V5W2KQC4;
+				INFOPLIST_FILE = ChineseChess/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.chris.ChineseChess;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83742DB62365FEE9001120FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1913C46AD342E1BC58E024D /* Pods-ChineseChess.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K7V5W2KQC4;
+				INFOPLIST_FILE = ChineseChess/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.chris.ChineseChess;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83742D9B2365FEE7001120FF /* Build configuration list for PBXProject "ChineseChess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83742DB22365FEE9001120FF /* Debug */,
+				83742DB32365FEE9001120FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83742DB42365FEE9001120FF /* Build configuration list for PBXNativeTarget "ChineseChess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83742DB52365FEE9001120FF /* Debug */,
+				83742DB62365FEE9001120FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83742D982365FEE7001120FF /* Project object */;
+}
