@@ -119,6 +119,40 @@ class DataManager: NSObject {
         sqlHandle!.createTable(withName: "noteTable", keys: [key1,key2,key3,key4,key5])
     }
     
+    //更新一条记事内容
+    class func updateNote(note:NoteModel){
+        if !isOpen{
+            self.openDataBase()
+        }
+        let whileStr = "noteId = \(note.noteId!)"
+        //根据主键ID来进行更新
+        sqlHandle?.updateData(note.toDictionary(), intoTable: "noteTable", while: whileStr, isSecurity: true)
+    }
+    
+    //删除一条记事
+    class func deleteNote(note:NoteModel){
+        if !isOpen{
+            self.openDataBase()
+        }
+         let whileStr = "noteId = \(note.noteId!)"
+        sqlHandle?.deleteData(whileStr , intoTable: "noteTable", isSecurity: true)
+    }
+    
+    //删除一个分组，将其下所有记事删除
+    class func deleteGroup(name: String){
+        if !isOpen{
+            self.openDataBase()
+        }
+        let ownGroup = "ownGroup=\"\(name)\""
+        let groupName = "GroupName=\"\(name)\""
+        let noteTable = "noteTable"
+        let groupTable = "groupTable"
+        //首先删除分组下所有记事
+        sqlHandle?.deleteData(ownGroup, intoTable: noteTable, isSecurity: true)
+        //再删除分组
+        sqlHandle?.deleteData(groupName, intoTable: groupTable, isSecurity: true)
+    }
+    
     //打开数据库的方法
     class func openDataBase(){
         //获取沙盒路径

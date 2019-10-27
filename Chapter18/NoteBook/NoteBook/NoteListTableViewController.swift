@@ -18,16 +18,15 @@ class NoteListTableViewController: UITableViewController {
         super.viewDidLoad()
         //设置导航栏标题
         self.title = name
-        //模拟创建10条数据
-        for _ in 0...10{
-            let model = NoteModel()
-            model.time = "2016.11.11"
-            model.title = "Just Shopping"
-            model.body = "Check list........"
-            dataArray.append(model)
-        }
         //进行导航按钮的加载
         installNavigationItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //从数据库读取记事
+        dataArray = DataManager.getNote(group: name!)
+        self.tableView.reloadData()
     }
     
     func installNavigationItem(){
@@ -37,11 +36,24 @@ class NoteListTableViewController: UITableViewController {
     }
     
     @objc func addNode(){
-        
+        let infoViewController = NoteInfoViewController()
+        infoViewController.group = name!
+        infoViewController.isNew = true
+        self.navigationController?.pushViewController(infoViewController, animated: true)
     }
     
     @objc func deleteGroup(){
-        
+        let alertController = UIAlertController(title:"Warning",message: "Are you sure to delete all the notes in this Group?", preferredStyle: .alert)
+        let action = UIAlertAction(title:"Cancel",style: .cancel,handler: nil)
+        let action2 = UIAlertAction(title:"Delete", style: .destructive, handler:{
+            (UIAlertAction) -> Void in
+                DataManager.deleteGroup(name: self.name!)
+                self.navigationController!.popViewController(animated: true)
+            
+        })
+        alertController.addAction(action)
+        alertController.addAction(action2)
+        self.present(alertController, animated: true, completion: nil)
     }
 
     //设置分区数为1
@@ -68,60 +80,17 @@ class NoteListTableViewController: UITableViewController {
         cell?.accessoryType = .disclosureIndicator
         return cell!
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    //点击某条记事，跳转记事详情页面
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //取消当前Cell的选中状态
+        tableView.deselectRow(at: indexPath, animated: true)
+        let infoViewController = NoteInfoViewController()
+        infoViewController.group = name!
+        infoViewController.isNew = false
+        infoViewController.noteModel = dataArray[indexPath.row]
+        self.navigationController?.pushViewController(infoViewController, animated: true)
+        
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

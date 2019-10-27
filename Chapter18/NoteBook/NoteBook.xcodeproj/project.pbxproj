@@ -50,9 +50,11 @@
 		834308582360A6C500210E33 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834308332360A6C500210E33 /* ConstraintLayoutSupportDSL.swift */; };
 		834308592360A6C500210E33 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834308342360A6C500210E33 /* ConstraintMakerRelatable.swift */; };
 		8343085B2360AAE200210E33 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343085A2360AAE200210E33 /* HomeView.swift */; };
+		83742D962365A7DD001120FF /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83742D952365A7DD001120FF /* UIColorExtention.swift */; };
 		838D3BCF23649F20009244AE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D3BCE23649F20009244AE /* DataManager.swift */; };
 		838D3BD12364A9B2009244AE /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D3BD02364A9B2009244AE /* NoteModel.swift */; };
 		838D3BD32364ABBB009244AE /* NoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838D3BD22364ABBB009244AE /* NoteListTableViewController.swift */; };
+		83BF5A7B236576FE00A81041 /* NoteInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BF5A7A236576FE00A81041 /* NoteInfoViewController.swift */; };
 		AC0C9E32D35E1FB433FAD24F /* Pods_NoteBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C3C7D208BE867A8F3FEAE /* Pods_NoteBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,9 +107,11 @@
 		834308332360A6C500210E33 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		834308342360A6C500210E33 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		8343085A2360AAE200210E33 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		83742D952365A7DD001120FF /* UIColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
 		838D3BCE23649F20009244AE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		838D3BD02364A9B2009244AE /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		838D3BD22364ABBB009244AE /* NoteListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewController.swift; sourceTree = "<group>"; };
+		83BF5A7A236576FE00A81041 /* NoteInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteInfoViewController.swift; sourceTree = "<group>"; };
 		9A8C3C7D208BE867A8F3FEAE /* Pods_NoteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,8 @@
 				838D3BCE23649F20009244AE /* DataManager.swift */,
 				838D3BD02364A9B2009244AE /* NoteModel.swift */,
 				838D3BD22364ABBB009244AE /* NoteListTableViewController.swift */,
+				83BF5A7A236576FE00A81041 /* NoteInfoViewController.swift */,
+				83742D952365A7DD001120FF /* UIColorExtention.swift */,
 			);
 			path = NoteBook;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				834308392360A6C500210E33 /* ConstraintAttributes.swift in Sources */,
 				8343084C2360A6C500210E33 /* ConstraintMaker.swift in Sources */,
 				834308352360A6C500210E33 /* ConstraintMultiplierTarget.swift in Sources */,
+				83BF5A7B236576FE00A81041 /* NoteInfoViewController.swift in Sources */,
 				834308522360A6C500210E33 /* Debugging.swift in Sources */,
 				834308552360A6C500210E33 /* LayoutConstraint.swift in Sources */,
 				838D3BCF23649F20009244AE /* DataManager.swift in Sources */,
@@ -352,6 +359,7 @@
 				834308432360A6C500210E33 /* ConstraintConfig.swift in Sources */,
 				8343085B2360AAE200210E33 /* HomeView.swift in Sources */,
 				834307FF2360A64000210E33 /* ViewController.swift in Sources */,
+				83742D962365A7DD001120FF /* UIColorExtention.swift in Sources */,
 				8343084E2360A6C500210E33 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				834308462360A6C500210E33 /* ConstraintLayoutGuide.swift in Sources */,
 				8343084D2360A6C500210E33 /* ConstraintRelation.swift in Sources */,
